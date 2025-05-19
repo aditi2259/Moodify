@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Mood</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h1>Your mood is: <span style="color: darkblue">{{ mood }}</span></h1>
+    <p>You said: "{{ text }}"</p>
+
+    {% if mood == 'positive' %}
+        <h3>🌞 Keep shining! Here's something to enjoy:</h3>
+        <p><a href="https://www.ted.com/talks/shawn_achor_the_happy_secret_to_better_work">Watch this TED Talk</a></p>
+
+    {% elif mood == 'negative' %}
+        <h3>💙 It’s okay to feel low sometimes. Try this:</h3>
+        <ul style="list-style: none;">
+            <li><a href="https://www.calmsage.com/motivational-quotes-to-lift-your-mood/">Read some positive quotes</a></li>
+            <li><a href="https://www.chess.com/play/computer">Play a calming game</a></li>
+        </ul>
+
+    {% elif mood == 'neutral' %}
+        <h3>🙂 Feeling neutral? Here’s something relaxing:</h3>
+        <p><a href="https://thenicelife.com/notepad">Try journaling with a notepad</a></p>
+    {% endif %}
+
+    <br><a href="/">🔄 Analyze Again</a>
+</body>
+</html>
